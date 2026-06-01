@@ -23,15 +23,15 @@ A full-stack social media feed application where users can create accounts, post
 socialapp/
 ├── backend/
 │   ├── models/
-│   │   ├── User.js          # User schema (collection 1)
-│   │   └── Post.js          # Post schema with likes & comments (collection 2)
+│   │   ├── User.js        
+│   │   └── Post.js          
 │   ├── routes/
-│   │   ├── auth.js          # /api/auth — register, login, me
-│   │   └── posts.js         # /api/posts — CRUD, like, comment
+│   │   ├── auth.js         
+│   │   └── posts.js        
 │   ├── middleware/
-│   │   └── auth.js          # JWT protect middleware
-│   ├── server.js            # Express entry point
-│   ├── .env.example         # Environment variables template
+│   │   └── auth.js        
+│   ├── server.js          
+│   ├── .env.example         
 │   └── package.json
 │
 └── frontend/
@@ -39,22 +39,22 @@ socialapp/
     │   └── index.html
     ├── src/
     │   ├── api/
-    │   │   └── index.js     # Axios instance + all API calls
+    │   │   └── index.js    
     │   ├── components/
-    │   │   ├── Avatar.js    # Auto-colored avatar by username
-    │   │   ├── Navbar.js    # Top navigation bar
-    │   │   ├── CreatePost.js # Post creation form
-    │   │   └── PostCard.js  # Single post with like/comment
+    │   │   ├── Avatar.js    
+    │   │   ├── Navbar.js    
+    │   │   ├── CreatePost.js
+    │   │   └── PostCard.js 
     │   ├── context/
-    │   │   └── AuthContext.js # Global auth state
+    │   │   └── AuthContext.js 
     │   ├── pages/
-    │   │   ├── FeedPage.js  # Main feed with pagination
-    │   │   ├── LoginPage.js # Login form
-    │   │   └── SignupPage.js # Registration form
+    │   │   ├── FeedPage.js 
+    │   │   ├── LoginPage.js 
+    │   │   └── SignupPage.js 
     │   ├── styles/
-    │   │   └── global.css   # Custom CSS with design tokens
-    │   ├── App.js           # Router + layout
-    │   └── index.js         # React entry point
+    │   │   └── global.css   
+    │   ├── App.js         
+    │   └── index.js       
     ├── .env.example
     └── package.json
 ```
@@ -79,8 +79,7 @@ cd socialapp
 cd backend
 npm install
 cp .env.example .env
-# Edit .env and fill in MONGO_URI and JWT_SECRET
-npm run dev   # Starts on http://localhost:5000
+
 ```
 
 ### 3. Frontend Setup
@@ -109,19 +108,13 @@ npm start     # Starts on http://localhost:3000
 5. Set **Start Command**: `node server.js`
 6. Add environment variables:
    ```
-   MONGO_URI=your_mongodb_atlas_uri
-   JWT_SECRET=your_secret_key
-   CLIENT_URL=https://your-frontend.vercel.app
-   PORT=5000
+ 
    ```
 
 ### Frontend — Vercel
 1. Go to [vercel.com](https://vercel.com) → New Project
-2. Import your GitHub repo, set **Root Directory** to `frontend`
+2. Import your GitHub repo, set **Root Directory** to `frontend.`
 3. Add environment variable:
-   ```
-   REACT_APP_API_URL=https://your-backend.onrender.com/api
-   ```
 4. Deploy!
 
 ---
