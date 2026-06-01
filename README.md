@@ -95,19 +95,11 @@ npm start     # Starts on http://localhost:3000
 ## 🌐 Deployment
 
 ### Database — MongoDB Atlas
-1. Go to [mongodb.com/atlas](https://www.mongodb.com/atlas)
-2. Create a free cluster
-3. Create a database user and get the connection string
-4. Whitelist `0.0.0.0/0` for IP access (or your Render IPs)
-
+ Go to [mongodb.com/atlas](https://www.mongodb.com/atlas)
 ### Backend — Render
 1. Push code to GitHub
 2. Go to [render.com](https://render.com) → New Web Service
-3. Connect your GitHub repo, select `backend` folder
-4. Set **Build Command**: `npm install`
-5. Set **Start Command**: `node server.js`
-6. Add environment variables:
-   ```
+
  
    ```
 
