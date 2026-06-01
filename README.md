@@ -1,10 +1,10 @@
-# ✦ SocialApp — Mini Social Post Application
+#  SocialApp — Mini Social Post Application
 
 A full-stack social media feed application where users can create accounts, post text or images, like, and comment — inspired by the TaskPlanet social page.
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -17,7 +17,7 @@ A full-stack social media feed application where users can create accounts, post
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 socialapp/
@@ -61,7 +61,7 @@ socialapp/
 
 ---
 
-## ⚙️ Local Setup
+## Local Setup
 
 ### Prerequisites
 - Node.js v16+
@@ -92,7 +92,7 @@ npm start     # Starts on http://localhost:3000
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### Database — MongoDB Atlas
  Go to [mongodb.com/atlas](https://www.mongodb.com/atlas)
@@ -111,73 +111,52 @@ npm start     # Starts on http://localhost:3000
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Auth
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| POST | `/api/auth/register` | ❌ | Create account |
-| POST | `/api/auth/login` | ❌ | Login |
-| GET | `/api/auth/me` | ✅ | Get current user |
+| POST | `/api/auth/register` | Create account |
+| POST | `/api/auth/login` | Login |
+| GET | `/api/auth/me` | Get current user |
 
 ### Posts
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| GET | `/api/posts?page=1&limit=10` | ❌ | Get paginated feed |
-| POST | `/api/posts` | ✅ | Create post (text/image) |
-| DELETE | `/api/posts/:id` | ✅ | Delete own post |
-| PUT | `/api/posts/:id/like` | ✅ | Toggle like |
-| POST | `/api/posts/:id/comment` | ✅ | Add comment |
-| DELETE | `/api/posts/:postId/comment/:commentId` | ✅ | Delete comment |
+| GET | `/api/posts?page=1&limit=10` | Get paginated feed |
+| POST | `/api/posts` |Create post (text/image) |
+| DELETE | `/api/posts/:id` | Delete own post |
+| PUT | `/api/posts/:id/like` | Toggle like |
+| POST | `/api/posts/:id/comment` | Add comment |
+| DELETE | `/api/posts/:postId/comment/:commentId` |Delete comment |
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔐 **Auth** — Signup/Login with JWT, persisted session
-- 📝 **Create Posts** — Text, image, or both (either is enough)
-- 🌐 **Public Feed** — All posts visible to everyone, newest first
-- ❤️ **Likes** — Toggle like, optimistic UI updates, like count + preview
-- 💬 **Comments** — Add/delete comments with instant updates
-- 📄 **Pagination** — Load 10 posts at a time with "Load more"
-- 🎨 **Clean UI** — Responsive, DM Sans + DM Serif Display typography
-- 🗑 **Delete** — Users can delete their own posts and comments
-
----
-
-## 🏆 Bonus Features Implemented
-
-- ✅ Optimistic like updates (instant UI feedback)
-- ✅ Efficient pagination (page + limit params)
-- ✅ Reusable `Avatar` component with auto-colored initials
-- ✅ Centralized API layer with auth interceptors
-- ✅ Form validation on both client and server
-- ✅ Responsive layout (mobile + desktop)
-- ✅ Code comments throughout
-- ✅ Auto redirect if token expires
+-  **Auth** — Signup/Login with JWT, persisted session
+-  **Create Posts** — Text, image, or both (either is enough)
+-  **Public Feed** — All posts visible to everyone, newest first
+ -  **Likes** — Toggle like, optimistic UI updates, like count + preview
+-  **Comments** — Add/delete comments with instant updates
+-  **Pagination** — Load 10 posts at a time with "Load more"
+-  **Clean UI** — Responsive, DM Sans + DM Serif Display typography
+-  **Delete** — Users can delete their own posts and comments
 
 ---
 
-## 📦 MongoDB Collections
+##  Bonus Features Implemented
 
-Only **2 collections** are used as required:
+-  Optimistic like updates (instant UI feedback)
+-  Efficient pagination (page + limit params)
+- Reusable `Avatar` component with auto-colored initials
+- Centralized API layer with auth interceptors
+-  Form validation on both client and server
+-  Responsive layout (mobile + desktop)
+-  Code comments throughout
+-  Auto redirect if token expires
 
-1. **users** — `{ username, email, password (hashed), avatar, bio, timestamps }`
-2. **posts** — `{ user, username, content, image, likes[], likedBy[], comments[], timestamps }`
+--
 
 ---
 
-## 🔑 Environment Variables
-
-**Backend** (`.env`):
-```env
-MONGO_URI=mongodb+srv://...
-JWT_SECRET=your_secret
-PORT=5000
-CLIENT_URL=http://localhost:3000
-```
-
-**Frontend** (`.env`):
-```env
-REACT_APP_API_URL=http://localhost:5000/api
-```
